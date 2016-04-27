@@ -1,0 +1,87 @@
+.wraper{
+	width: 100%;
+	background-color: #dddddd;
+}
+
+.container{
+    width: 980px !important;
+    height: 1095 !important;
+}
+
+.info_header{
+	height: 280px;
+	margin-left: -15px;
+	margin-right: -15px;
+	background-color: white;
+}
+
+.info{
+	height: 240px;
+}
+
+.photo{
+	width: 240px;
+	height: 240px;
+}
+
+.contact{
+	height: 40px;
+	background-color: #f6f6f6;
+	padding-top: 10px;
+	padding-left: 15px;
+}
+
+.link {
+	padding-top: 10px;
+	text-align: center;
+}
+
+.background{
+	background-color: white;
+	margin-top: 10px;
+	margin-left: -15px;
+	margin-right: -20px;
+}
+
+.right-sildbar{
+	background-color: white;
+	margin-top: 10px;
+	margin-right: -15px;
+	height: 500px;
+}
+
+.title{
+	color: white;
+	background-color: black;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	padding-top: 4px;
+}
+
+
+.summary{
+	margin-left: 15px;
+}
+
+.sub-title{
+	padding-top: 10px;
+	font-size: 18px;
+}
+
+.experience{
+	margin-left: 15px;
+	margin-top: -20px;
+}
+
+.project{
+	margin-left: 15px;
+}
+
+.skill{
+	margin-left: 15px;
+}
+
+.education{
+	margin-left: 15px;
+}
