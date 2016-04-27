@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myCV" class="no-js"> <!--<![endif]-->
+ <html lang="en" ng-app="myCV" class="no-js">
 <head>
+ <link rel="icon" href="images/favicon.ico">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Le Tan Vu | LinkedIn</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="js/angular.min.js"></script>
   <script src="js/app.js"></script>
-  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body ng-controller="controller_CV">
   <div class="wraper">
+  <div class="background">
+  	<img height="500px" width="100%" src="images/background.jpg">
+  </div>
+  
   <div class="container">
   
  <!-- Phan header --> 
@@ -30,17 +29,23 @@
 					<img class="photo" src="images/avatar.jpg">
 				</div>
 				<div class="col-xs-9">
-					<h2>Tan Vu Le</h2>
+					<h2 id="h2-custom">Tan Vu Le</h2>
 					<p>Student at University of Science, Viet Nam</p>
 					<p>Viet Nam | Web developer</p>
-					<a href="https://www.facebook.com/letanvu02011995">Facebook | Email</a>	
+					<a href="https://www.facebook.com/letanvu02011995" style="color:black; font-weight:bold">Facebook</a>	
+					<p> Email: letanvu.it@gmail.com</p>
+					<p> Phone: (+84)01657872770</p>
 				</div>
 			</div>
 		</div>
 		<div class="contact">
 			<div class="row">
 				<div class="col-xs-10">
+				<span>
+					<img width="16px" height="16px" src="images/apple-touch-icon.png">
 					<a>https://vn.linkedin.com/in/tan-vu-le-235862117</a>
+				</span>
+					
 				</div>
 				<div class="col-xs-2">
 					<div class="contact-info">
@@ -72,14 +77,11 @@
 							<p class="sub-title">Summary</p>
 						</div>
 					</div>
-					<p>
-						I'm a student at University of Science.
+					<p >
+						{{summary.row1}}
 					</p>
-					<p>
-						I'm a student at University of Science.
-					</p>
-					<p>
-						I'm a student at University of Science.
+					<p >
+						{{summary.row2}}
 					</p>
 					<hr/>
 				</div>
@@ -96,15 +98,16 @@
 							<p class="sub-title">Experience</p>
 						</div>
 					</div>
-					<p>
-						I'm a student at University of Science.
-					</p>
-					<p>
-						I'm a student at University of Science.
-					</p>
-					<p>
-						I'm a student at University of Science.
-					</p>
+					<h4 id="h4-custom">{{experience.title1}}</h4>
+					<p>{{experience.datetime1}}</p>
+					<p>{{experience.content1}}</p>
+					
+					<br/>
+					
+					<h4 id="h4-custom">{{experience.title2}}</h4>
+					<p>{{experience.datetime2}}</p>
+					<p>{{experience.content2}}</p>
+					
 					<hr/>
 				</div>
 
@@ -120,15 +123,15 @@
 							<p class="sub-title">Project</p>
 						</div>
 					</div>
-					<p>
-						I'm a student at University of Science.
-					</p>
-					<p>
-						I'm a student at University of Science.
-					</p>
-					<p>
-						I'm a student at University of Science.
-					</p>
+					
+					<h4 id="h4-custom">{{project.title1}}</h4>
+					<p>{{project.time1}}</p>
+										
+					<br/>
+					
+					<h4 id="h4-custom">{{project.title2}}</h4>
+					<p>{{project.time2}}</p>
+	
 					<hr/>
 				</div>
 				
@@ -144,15 +147,31 @@
 							<p class="sub-title">Skill</p>
 						</div>
 					</div>
-					<p>
-						I'm a student at University of Science.
-					</p>
-					<p>
-						I'm a student at University of Science.
-					</p>
-					<p>
-						I'm a student at University of Science.
-					</p>
+					<p>Top skill</p><br/>
+						
+					<p class="box-skill">{{mySkill.mot}}</p>
+					<p class="box-skill">{{mySkill.hai}}</p>
+					<p class="box-skill">{{mySkill.ba}}</p>
+					<p class="box-skill">{{mySkill.bon}}</p>
+					<p class="box-skill">{{mySkill.nam}}</p>
+					<p class="box-skill">{{mySkill.sau}}</p>
+					<p class="box-skill">{{mySkill.bay}}</p>
+					
+					<p> I also knows about </p><br/>
+					<div class="row">
+						<div class="col-xs-3">
+							<p class="box-skill">{{mySkill.tam}}</p>
+						</div>
+						<div class="col-xs-3">
+							<p class="box-skill">{{mySkill.chin}}</p>
+						</div>
+						<div class="col-xs-3">
+							<p class="box-skill">{{mySkill.muoi}}</p>
+						</div>
+						<div class="col-xs-3">
+							<p class="box-skill">{{mySkill.muoimot}}</p>
+						</div>
+					</div>
 					<hr/>
 				</div>
 				
@@ -168,15 +187,15 @@
 							<p class="sub-title">Education</p>
 						</div>
 					</div>
-					<p>
-						I'm a student at University of Science.
-					</p>
-					<p>
-						I'm a student at University of Science.
-					</p>
-					<p>
-						I'm a student at University of Science.
-					</p>
+					
+					<h4 id="h4-custom">{{education.title1}}</h4>
+					<p>{{education.datetime1}}</p>
+					
+					<br/>
+					
+					<h4 id="h4-custom">{{education.title2}}</h4>
+					<p>{{education.datetime2}}</p>
+
 					<hr/>
 				</div>
 			</div>
@@ -193,14 +212,6 @@
   </div>
  </div>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
