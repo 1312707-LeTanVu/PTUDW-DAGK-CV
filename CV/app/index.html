@@ -143,12 +143,27 @@
 						</span>
 						</div>
 					</div>
+					<div ng-repeat="item in summary">
+						<p>{{item.data}}</p>
+					</div>	
 					
-					<p>{{summary.data}}</p>
-
+					<input type="button" id="show-add-summary" value="Add">
+					
+					<div id="box-add-summary">
+						<label>Add Summary</label><br/>
+							<textarea ng-model="newSummary" class="edit-summary"></textarea>
+						<br/>
+						<input type="button" id="save-add-summary" ng-click="addSummary(newSummary)" value="Save">
+						<input type="button" id="close-box-add-summary" value="Close">
+					</div>
+						
 					<div id="box-edit-summary">
-						<label>Summary</label><br/>
-						<textarea ng-model="summary.data" id="edit-summary" ></textarea><br/>
+						<label>Edit Summary</label><br/>
+						<div ng-repeat="item in summary">
+							<textarea ng-model="item.data" class="edit-summary"></textarea>
+							<input type="button" class="delete" ng-click="deleteSummary(item)" value="Delete">
+						</div>
+						
 						<input type="button" id="close-box-edit-summary" value="Close">
 					</div>
 					
@@ -164,19 +179,43 @@
 							<img src="images/experience.png">
 						</div>
 						<div class="col-xs-11">
-							<p class="sub-title">Experience</p>
+							<span>
+							<label class="sub-title">Experience</label>
+							<input type="button" id="show_edit-experience" value="Edit">
+							</span>
 						</div>
 					</div>
-					<h4 id="h4-custom">{{experience.title1}}</h4>
-					<p>{{experience.datetime1}}</p>
-					<p>{{experience.content1}}</p>
 					
-					<br/>
+					<div ng-repeat="item in experience">
+						<h4 id="h4-custom">{{item.title}}</h4>
+						<p>{{item.datetime}}</p>
+						<p>{{item.content}}</p>
+						<br/>
+					</div>			
 					
-					<h4 id="h4-custom">{{experience.title2}}</h4>
-					<p>{{experience.datetime2}}</p>
-					<p>{{experience.content2}}</p>
+					<input type="button" id="show-add-experience" value="Add">
 					
+					<div id="box-add-experience">
+						<label>Add Experience</label><br/>
+							<input type="text" ng-model="titleEx" placeholder="add title"><br/>
+							<input type="text" ng-model="datetimeEx"  placeholder="add datetime"><br/>
+							<textarea ng-model="contentEx" class="edit-summary"  placeholder="add content"></textarea>
+						<br/>
+						<input type="button" id="save-add-experience" ng-click="addExperience(titleEx,datetimeEx,contentEx)" value="Save">
+						<input type="button" id="close-box-add-experience" value="Close">
+					</div>
+					
+					<div id="box-edit-experience">
+						<label>Edit Experience</label><br/>
+						<div ng-repeat="item in experience">
+							<input type="text" ng-model="item.title"><br/>
+							<input type="text" ng-model="item.datetime"><br/>
+							<textarea ng-model="item.content" class="edit-summary"></textarea>
+							<input type="button" class="delete" ng-click="deleteExperience(item)" value="Delete">
+						</div>
+						<br/>
+						<input type="button" id="close-box-edit-experience" value="Close">
+					</div>
 					<hr/>
 				</div>
 
@@ -189,18 +228,44 @@
 							<img src="images/experience.png">
 						</div>
 						<div class="col-xs-11">
-							<p class="sub-title">Project</p>
+							<span>
+								<label class="sub-title">Project</label>
+								<input type="button" id="show_edit-project" value="Edit">
+							</span>
 						</div>
 					</div>
 					
-					<h4 id="h4-custom">{{project.title1}}</h4>
-					<p>{{project.time1}}</p>
-										
-					<br/>
+					<div ng-repeat="item in project">
+						<h4 id="h4-custom">{{item.title}}</h4>
+						<p>{{item.datetime}}</p>
+						<p>{{item.content}}</p>
+						<br/>
+					</div>		
 					
-					<h4 id="h4-custom">{{project.title2}}</h4>
-					<p>{{project.time2}}</p>
-	
+					<input type="button" id="show-add-project" value="Add">
+					
+					<div id="box-add-project">
+						<label>Add Project</label><br/>
+							<input type="text" ng-model="titleP" placeholder="add title"><br/>
+							<input type="text" ng-model="datetimeP"  placeholder="add datetime"><br/>
+							<textarea ng-model="contentP" class="edit-summary"  placeholder="add content"></textarea>
+						<br/>
+						<input type="button" id="save-add-project" ng-click="addProject(titleP,datetimeP,contentP)" value="Save">
+						<input type="button" id="close-box-add-project" value="Close">
+					</div>
+					
+					<div id="box-edit-project">
+						<label>Edit Project</label><br/>
+						<div ng-repeat="item in project">
+							<input type="text" ng-model="item.title"><br/>
+							<input type="text" ng-model="item.datetime"><br/>
+							<textarea ng-model="item.content" class="edit-summary"></textarea>
+							<input type="button" class="delete" ng-click="deleteProject(item)" value="Delete">
+						</div>
+						<br/>
+						<input type="button" id="close-box-edit-project" value="Close">
+					</div>
+					
 					<hr/>
 				</div>
 				
@@ -213,34 +278,51 @@
 							<img src="images/skill.png">
 						</div>
 						<div class="col-xs-11">
-							<p class="sub-title">Skill</p>
+							<span>
+								<label class="sub-title">Skill</label>
+								<input type="button" id="show_edit-skill" value="Edit">
+							</span>
 						</div>
 					</div>
 					<p>Top skill</p><br/>
-						
-					<p class="box-skill">{{mySkill.mot}}</p>
-					<p class="box-skill">{{mySkill.hai}}</p>
-					<p class="box-skill">{{mySkill.ba}}</p>
-					<p class="box-skill">{{mySkill.bon}}</p>
-					<p class="box-skill">{{mySkill.nam}}</p>
-					<p class="box-skill">{{mySkill.sau}}</p>
-					<p class="box-skill">{{mySkill.bay}}</p>
+					
+					<div ng-repeat="item in mySkill">
+						<p class="box-skill">{{item.data}}</p>
+					</div>
 					
 					<p> I also knows about </p><br/>
-					<div class="row">
-						<div class="col-xs-3">
-							<p class="box-skill">{{mySkill.tam}}</p>
-						</div>
-						<div class="col-xs-3">
-							<p class="box-skill">{{mySkill.chin}}</p>
-						</div>
-						<div class="col-xs-3">
-							<p class="box-skill">{{mySkill.muoi}}</p>
-						</div>
-						<div class="col-xs-3">
-							<p class="box-skill">{{mySkill.muoimot}}</p>
-						</div>
+					<span ng-repeat="item in otherskill">
+						<label class="box-skill">{{item.data}}</label>
+					</span>
+					
+					<input type="button" id="show-add-skill" value="Add">
+					
+					<div id="box-add-skill">
+						<label>Add Skill</label><br/>
+							<input type="text" ng-model="newSkill" placeholder="add other skill"><br/>
+						<br/>
+						<input type="button" id="save-add-skill" ng-click="addSkill(newSkill)" value="Save">
+						<input type="button" id="close-box-add-skill" value="Close">
 					</div>
+					
+					<div id="box-edit-skill">
+						<label>Edit Skill</label><br/>
+						<label>Top Skill</label><br/>
+						<div ng-repeat="item in mySkill">
+							<input ng-model="item.data">
+							<input type="button" class="delete" ng-click="deleteSkill(item)" value="Delete">
+						</div>
+						<br/>
+						<label>Other skill</label><br/>
+						<br/>
+						<div ng-repeat="item in otherskill">
+							<input ng-model="item.data">
+							<input type="button" class="delete" ng-click="deleteOtherSkill(item)" value="Delete">
+						</div><br/>
+						
+						<input type="button" id="close-box-edit-skill" value="Close">
+					</div>
+					
 					<hr/>
 				</div>
 				
@@ -253,31 +335,50 @@
 							<img src="images/education.png">
 						</div>
 						<div class="col-xs-11">
-							<p class="sub-title">Education</p>
+							<span>
+								<label class="sub-title">Education</label>
+								<input type="button" id="show_edit-education" value="Edit">
+							</span>
 						</div>
 					</div>
 					
-					<h4 id="h4-custom">{{education.title1}}</h4>
-					<p>{{education.datetime1}}</p>
+					<div ng-repeat="item in education">
+						<h4 id="h4-custom">{{item.title}}</h4>
+						<p>{{item.datetime}}</p><br/>
+					</div>
 					
-					<br/>
+					<input type="button" id="show-add-education" value="Add">
 					
-					<h4 id="h4-custom">{{education.title2}}</h4>
-					<p>{{education.datetime2}}</p>
-
+					<div id="box-add-education">
+						<label>Add Education</label><br/>
+							<input type="text" ng-model="titleE" placeholder="add title"><br/>
+							<input type="text" ng-model="datetimeE"  placeholder="add datetime"><br/>
+						<br/>
+						<input type="button" id="save-add-education" ng-click="addEducation(titleE,datetimeE,contentE)" value="Save">
+						<input type="button" id="close-box-add-education" value="Close">
+					</div>
+					
+					<div id="box-edit-education">
+						<label>Edit Education</label><br/>
+						<div ng-repeat="item in education">
+							<input ng-model="item.title"><br/>
+							<input ng-model="item.datetime"><br/><br/>
+							<input type="button" class="delete" ng-click="deleteEducation(item)" value="Delete">
+						</div><br/>
+						
+						<input type="button" id="close-box-edit-education" value="Close">
+					</div>
+					
 					<hr/>
 				</div>
 			</div>
 		</div>
 		
 		<div class="col-xs-4">
-			<div class="right-sildbar">
-				
+			<div class="right-sildbar">	
 			</div>
 		</div>	
 	</div>
-	
-
   </div>
  </div>
   <script src="components/version/version.js"></script>

@@ -1,13 +1,40 @@
-	{
-		"mot":"C++",
-		"hai":"C",
-		"ba":"C#",
-		"bon":"SQL",
-		"nam":"HTML",
-		"sau":"Android",
-		"bay":"CSS",
-		"tam":"JavaScript",
-		"chin":"Microsoft office",
-		"muoi":".NET",
-		"muoimot":"Java"
-	}
+
+{
+	"skill":
+	[
+		{
+			"data":"C++"
+		},
+		{
+			"data":"C"
+		},
+		{
+			"data":"C#"
+		},
+		{
+			"data":"SQL"
+		},
+		{
+			"data":"HTML"
+		},
+		{
+			"data":"Android"
+		},
+		{
+			"data":"CSS"
+		}
+	],
+	
+	"otherskill":
+	[
+		{
+			"data":"SQL Server"
+		},
+		{
+			"data":".NET"
+		},
+		{
+			"data":"Java"
+		}
+	]
+}
