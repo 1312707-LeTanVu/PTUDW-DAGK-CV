@@ -112,3 +112,96 @@
 	color:black;
 	font-weight: bold;
 }
+
+
+
+#box-edit-name
+{
+   background-color:white;
+   border-radius:3px;
+   box-shadow:0px 0px 10px 0px #424242;
+   padding:10px;
+   box-sizing:border-box;
+   visibility:hidden;
+   display:none;
+}
+
+
+#box-edit-headline
+{
+   background-color:white;
+   border-radius:3px;
+   box-shadow:0px 0px 10px 0px #424242;
+   padding:10px;
+   box-sizing:border-box;
+   visibility:hidden;
+   display:none;
+}
+
+
+#box-edit-country
+{
+   background-color:white;
+   border-radius:3px;
+   box-shadow:0px 0px 10px 0px #424242;
+   padding:10px;
+   box-sizing:border-box;
+   visibility:hidden;
+   display:none;
+}
+
+
+#box-edit-major
+{
+   background-color:white;
+   border-radius:3px;
+   box-shadow:0px 0px 10px 0px #424242;
+   padding:10px;
+   box-sizing:border-box;
+   visibility:hidden;
+   display:none;
+}
+
+
+
+#box-edit-email
+{
+   background-color:white;
+   border-radius:3px;
+   box-shadow:0px 0px 10px 0px #424242;
+   padding:10px;
+   box-sizing:border-box;
+   visibility:hidden;
+   display:none;
+}
+
+
+#box-edit-phone
+{
+   background-color:white;
+   border-radius:3px;
+   box-shadow:0px 0px 10px 0px #424242;
+   padding:10px;
+   box-sizing:border-box;
+   visibility:hidden;
+   display:none;
+}
+
+#box-edit-summary
+{
+   width: 600px;
+   height: 350px;
+   background-color:white;
+   padding:10px;
+   border: 2px;
+   box-sizing:border-box;
+   visibility:hidden;
+   display:none;
+}
+
+
+#edit-summary
+{
+	width: 600px;
+	height: 200px;
+}

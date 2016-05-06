@@ -9,8 +9,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery-2.2.3.min.js"></script>
   <script src="js/angular.min.js"></script>
   <script src="js/app.js"></script>
+ 
+  
 </head>
 <body ng-controller="controller_CV">
   <div class="wraper">
@@ -19,7 +22,7 @@
   </div>
   
   <div class="container">
-  
+         
  <!-- Phan header --> 
  	
   	<div class="info_header">
@@ -29,15 +32,75 @@
 					<img class="photo" src="images/avatar.jpg">
 				</div>
 				<div class="col-xs-9">
-					<h2 id="h2-custom">Tan Vu Le</h2>
-					<p>Student at University of Science, Viet Nam</p>
-					<p>Viet Nam | Web developer</p>
-					<a href="https://www.facebook.com/letanvu02011995" style="color:black; font-weight:bold">Facebook</a>	
-					<p> Email: letanvu.it@gmail.com</p>
-					<p> Phone: (+84)01657872770</p>
+				<span>
+					<label id="h2-custom">{{profile.name}}</label>
+					<input type="button" id="show_edit-name" value="Edit">
+				</span>
+				<div id="box-edit-name">
+					<label>Name</label>
+					<input ng-model="profile.name" type="text" >
+					<input type="button" id="close-box-edit-name" value="Close">
+				</div>
+				<br/>
+				
+				<span>
+					<label id="h2-custom">{{profile.headline}}</label>
+					<input type="button" id="show_edit-headline" value="Edit">
+				</span>
+				<div id="box-edit-headline">
+					<label>Headline</label>
+					<input ng-model="profile.headline" type="text" >
+					<input type="button" id="close-box-edit-headline" value="Close">
+				</div>
+				<br/>
+				
+				<span>
+					<label id="h2-custom">{{profile.country}}</label>
+					<input type="button" id="show_edit-country" value="Edit">
+				</span>
+				<div id="box-edit-country">
+					<label>Country</label>
+					<input ng-model="profile.country" type="text" >
+					<input type="button" id="close-box-edit-country" value="Close">
+				</div>
+				<br/>
+				
+				<span>
+					<label id="h2-custom">{{profile.major}}</label>
+					<input type="button" id="show_edit-major" value="Edit">
+				</span>
+				<div id="box-edit-major">
+					<label>Major</label>
+					<input ng-model="profile.major" type="text" >
+					<input type="button" id="close-box-edit-major" value="Close">
+				</div>
+				<br/>
+				
+				<span>
+					<label id="h2-custom">{{profile.email}}</label>
+					<input type="button" id="show_edit-email" value="Edit">
+				</span>
+				<div id="box-edit-email">
+					<label>Email</label>
+					<input ng-model="profile.email" type="text" >
+					<input type="button" id="close-box-edit-email" value="Close">
+				</div>
+				<br/>
+				
+				<span>
+					<label id="h2-custom">{{profile.phone}}</label>
+					<input type="button" id="show_edit-phone" value="Edit">
+				</span>
+				<div id="box-edit-phone">
+					<label>Headline</label>
+					<input ng-model="profile.phone" type="text" >
+					<input type="button" id="close-box-edit-phone" value="Close">
+				</div>
+					
 				</div>
 			</div>
 		</div>
+		
 		<div class="contact">
 			<div class="row">
 				<div class="col-xs-10">
@@ -74,15 +137,21 @@
 							<img src="images/summary.png">
 						</div>
 						<div class="col-xs-11">
-							<p class="sub-title">Summary</p>
+						<span>
+							<label class="sub-title">Summary</label>
+							<input type="button" id="show_edit-summary" value="Edit">
+						</span>
 						</div>
 					</div>
-					<p >
-						{{summary.row1}}
-					</p>
-					<p >
-						{{summary.row2}}
-					</p>
+					
+					<p>{{summary.data}}</p>
+
+					<div id="box-edit-summary">
+						<label>Summary</label><br/>
+						<textarea ng-model="summary.data" id="edit-summary" ></textarea><br/>
+						<input type="button" id="close-box-edit-summary" value="Close">
+					</div>
+					
 					<hr/>
 				</div>
 				
@@ -211,7 +280,6 @@
 
   </div>
  </div>
-
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
